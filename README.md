@@ -1,2 +1,2 @@
-# devilYD.github.io
+# devilyd.github.io
 YD blog
