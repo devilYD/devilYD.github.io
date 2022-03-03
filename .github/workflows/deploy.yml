@@ -10,9 +10,7 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2 
-        with:
-          persist-credentials: false
-          submodules: recursive
+
       - name: "Using Special Node Version"
         uses: actions/setup-node@v2
         with:
