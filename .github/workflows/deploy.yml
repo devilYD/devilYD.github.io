@@ -1,49 +1,57 @@
-name: Hexo CI CD
+name: Blog CI/CD
+
+# 触发条件：在 push 到 hexo-blog-backup 分支后触发
 on:
-  workflow_dispatch:
   push:
-    branches:
+    branches: 
       - main
+
+env:
+  TZ: Asia/Shanghai
+
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  blog-cicd:
+    name: Hexo blog build & deploy
+    runs-on: ubuntu-latest # 使用最新的 Ubuntu 系统作为编译部署的环境
+
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2 
+    - name: Checkout codes
+      uses: actions/checkout@v2
 
-      - name: "Using Special Node Version"
-        uses: actions/setup-node@v2
-        with:
-          node-version: "12"
+    - name: Setup node
+      # 设置 node.js 环境
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
 
-      - name: Generate Hexo site ⚗️
-        run: |
-          echo "Github Action Env Checking..."
-          echo "Node Version: `node -v`"
-          echo "Coping theme config file"
-          CONFIG_FILE="_config.yml"
-          NEXT_THEME_FILE="_config.next.yml"
-          THEME_DIR="themes/hexo-theme-next"
-          TARGET_FILE="${THEME_DIR}/${CONFIG_FILE}"
-          echo "Copying theme config file"
-          cp "${NEXT_THEME_FILE}" "${TARGET_FILE}"
-          head -n 1 "${TARGET_FILE}"
-          # Install dependencies && update env
-          echo "Install npm dependencies"
-          npm i
-          echo "Load hexo binary..."
-          export PATH="$PATH:./node_modules/.bin"
-          echo "Hexo version: $(hexo -v)"
-          echo "Gulp version: $(gulp -v)"
-          echo "Gulp Tasks" && gulp --tasks
-          # Generate site && minify site files, such as: html, js, css
-          hexo g --debug && gulp
+    - name: Cache node modules
+      # 设置包缓存目录，避免每次下载
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@3.6.2
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: public/ # The folder the action should deploy.
-          CLEAN: true # Automatically remove deleted 
-          PRESERVE: true
+    - name: Install hexo dependencies
+      # 下载 hexo-cli 脚手架及相关安装包
+      run: |
+        npm install -g hexo-cli
+        npm install
+
+    - name: Generate files
+      # 编译 markdown 文件
+      run: |
+        hexo clean
+        hexo generate
+
+    - name: Deploy hexo blog
+      env: 
+        # Github 仓库
+        GITHUB_REPO: github.com/devilYD/devilYD.github.io
+      # 将编译后的博客文件推送到指定仓库
+      run: |
+        cd ./public && git init && git add .
+        git config user.name "yifanzheng"
+        git config user.email "zhengyifan1996@outlook.com"
+        git add .
+        git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+        git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:master
