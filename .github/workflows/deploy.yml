@@ -50,8 +50,8 @@ jobs:
       # 将编译后的博客文件推送到指定仓库
       run: |
         cd ./public && git init && git add .
-        git config user.name "yifanzheng"
-        git config user.email "zhengyifan1996@outlook.com"
+        git config user.name "devilYD"
+        git config user.email "347231240@qq.com"
         git add .
         git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
         git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:master
