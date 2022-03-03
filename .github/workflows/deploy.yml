@@ -23,7 +23,7 @@ jobs:
           echo "Coping theme config file"
           CONFIG_FILE="_config.yml"
           NEXT_THEME_FILE="_config.next.yml"
-          THEME_DIR="themes/next"
+          THEME_DIR="themes/hexo-theme-next"
           TARGET_FILE="${THEME_DIR}/${CONFIG_FILE}"
           echo "Copying theme config file"
           cp "${NEXT_THEME_FILE}" "${TARGET_FILE}"
