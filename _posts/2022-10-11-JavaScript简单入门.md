@@ -2,7 +2,7 @@
 layout:         post
 title:          2022-10-11-JavaScript简单入门
 subtitle:       如何使网页活过来
-date:           2022-10-7
+date:           2022-10-11
 auther:         YD
 header-img:     img/YD-rainingnight.jpg
 catalog:            true
