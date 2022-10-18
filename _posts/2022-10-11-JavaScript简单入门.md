@@ -384,7 +384,7 @@ document.getElementById("btn").onclick = function () {
 //需求一
 var usernameInput = document.getElementById("username");
 usernameInput.onblur = function () {
-  vae username = usernameInput.value.trim();
+  var username = usernameInput.value.trim();
   if(username.length >= 6 && username.length <= 12) {
     //隐藏提示信息
   } else {
@@ -395,7 +395,7 @@ usernameInput.onblur = function () {
 
 ```JavaScript
 //需求二
-var regForm = dovument.getElementById("reg-form");
+var regForm = document.getElementById("reg-form");
 regForm.onsubmit = function() {
   //判断每个表单项均符合要求，若有一个不符合则返回false
   //均符合则返回false
