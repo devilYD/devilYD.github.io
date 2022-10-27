@@ -167,3 +167,20 @@ bean本质上就是对象，创建bean使用构造方法完成，且默认调用
 * 关闭容器方式：
   * 手工关闭容器，使用`ConfigurableApplicationContext`接口的`close()`方法
   * 注册关闭钩子，使用`ConfigurableApplicationContext`接口的`registerShutdownHook()`方法
+
+## 关于bean标签的属性
+
+```XML
+<bean
+  id="" bean的id
+  name="" bean的别名
+  class=""  bean类型，也可以用于指定对应的静态工厂类
+  scop="singleton"  控制bean的实例数量
+  init-method="init"  生命周期初始化方法
+  destroy-method="destory"  生命周期销毁方法
+  autowire="byType" 自动装配类型
+  factory-method="" bean工厂方法,应用于静态工厂或实例工厂
+  factory-bean="" 示例工厂bean
+  lazy-init="true"  控制bean的延迟加载
+/>
+```
