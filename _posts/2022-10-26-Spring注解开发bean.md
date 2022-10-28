@@ -2,7 +2,7 @@
 layout:         post
 title:          Spring注解开发定义bean
 subtitle:       简化开发的第一步
-date:           2022-10-25
+date:           2022-10-26
 auther:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
