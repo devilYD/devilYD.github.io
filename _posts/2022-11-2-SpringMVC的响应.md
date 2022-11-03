@@ -26,4 +26,7 @@ tags:
 
 * 名称：`@ResponseBody`
 * 类型：方法注解
-* 位置：SpringMVC控制器返回值作为响应体
+* 位置：方法前
+* 作用：SpringMVC控制器返回值作为响应体
+
+注意：`@ResponseBody`可以写在类前表示整个类的所有方法均以SpringMVC控制器返回值作为响应体。
