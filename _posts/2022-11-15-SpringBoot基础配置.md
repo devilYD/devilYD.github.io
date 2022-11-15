@@ -2,7 +2,7 @@
 layout:         post
 title:          SpringBoot基础配置
 subtitle:       Web相关
-date:           2022-11-14
+date:           2022-11-15
 auther:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
