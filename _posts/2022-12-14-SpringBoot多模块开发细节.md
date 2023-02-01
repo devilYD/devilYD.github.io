@@ -249,7 +249,7 @@ public class SpringConfig {
 
 ### 通过将其他模块的配置文件视为另一个环境引入
 
-* SpringBoot支持多环境开发，只需要将配置文件命名为`application-{%环境名}`即可视为另一个配置环境，使用时只需要在主配置文件中使用`spring.profiles.active`属性指定需要启用的环境即可
+* SpringBoot支持多环境开发，只需要将配置文件命名为`application-{环境名}`即可视为另一个配置环境，使用时只需要在主配置文件中使用`spring.profiles.active`属性指定需要启用的环境即可
 * 同理，在多模块开发时可以将其他模块的配置文件视为另一个环境配置文件，在主模块中将这些环境配置文件设置为启用即可
 
 ### 实现EnvironmentPostProcessor接口来将环境配置在Spring启动前注入
@@ -319,8 +319,9 @@ public class CommonConfigEnvironmentPostProcessor implements EnvironmentPostProc
 
 ```
 org.springframework.boot.env.EnvironmentPostProcessor=\
-    {%你自定义实现的EnvironmentPostProcessor接口的完整类路径}
+    {你自定义实现的EnvironmentPostProcessor接口的完整类路径}
 ```
 
 * 这样，引用了这个jar包的SpringBoot应用会自动按前面定义的规则加载配置文件
 
+## 
