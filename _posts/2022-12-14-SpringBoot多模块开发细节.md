@@ -249,7 +249,7 @@ public class SpringConfig {
 
 ### 通过将其他模块的配置文件视为另一个环境引入
 
-* SpringBoot支持多环境开发，只需要将配置文件命名为`application-{环境名}`即可视为另一个配置环境，使用时只需要在主配置文件中使用`spring.profiles.active`属性指定需要启用的环境即可
+* SpringBoot支持多环境开发，只需要将配置文件命名为`application-${环境名}`即可视为另一个配置环境，使用时只需要在主配置文件中使用`spring.profiles.active`属性指定需要启用的环境即可
 * 同理，在多模块开发时可以将其他模块的配置文件视为另一个环境配置文件，在主模块中将这些环境配置文件设置为启用即可
 
 ### 实现EnvironmentPostProcessor接口来将环境配置在Spring启动前注入
@@ -319,9 +319,40 @@ public class CommonConfigEnvironmentPostProcessor implements EnvironmentPostProc
 
 ```
 org.springframework.boot.env.EnvironmentPostProcessor=\
-    {你自定义实现的EnvironmentPostProcessor接口的完整类路径}
+    ${你自定义实现的EnvironmentPostProcessor接口的完整类路径}
 ```
 
 * 这样，引用了这个jar包的SpringBoot应用会自动按前面定义的规则加载配置文件
 
-## 
+## 关于测试
+
+由于`@SpringBootTest`是通过运行SpringBoot项目的启动类进行IoC容器初始化、bean注入等操作的，而SpringBoot多模块中只有控制层有启动类，故若直接使用`@SpringBootTest`注解进行测试，则会出现报错，具体的解决方案有很多种，这里就先分享最简单的：在test文件夹下创建专用的测试启动类
+
+* 在test/java...源码目录下创建`ApplicationForTest.java`,内容如下：
+
+```JAVA
+/**
+ * @author YD
+ * @decription 测试用启动类，提供自定义SpringBoot测试环境
+ */
+
+@SpringBootApplication(scanBasePackages = {"org.yd"})
+//scanBasePackages属性用来限定扫描路径，可根据自己的需求自由设定
+//若不设置则默认扫描整个模块
+public class ApplicationForTest {
+    public static void main(String[] args) {
+        SpringApplication.run(ApplicationForTest.class, args);
+    }
+}
+```
+
+然后在测试类中使用`@RunWith(SpringRunner.class)`和`@SpringBootTest`注解即可正常测试了，其中`@SpringBootTest`注解须设置`classes`属性用来指定我们自定义的启动类
+
+```JAVA
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = {ApplicationForTest.class})
+public class Test {
+    @Autowired
+    private UserDao userDao;
+}
+```
