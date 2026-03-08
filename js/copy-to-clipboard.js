@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
         button.classList.add('copy-button'); // add CSS class
         codeBlock.parentNode.insertBefore(button, codeBlock.nextSibling);
 
+        copyToClipboard(button);
+    }
+
+    function copyToClipboard(button) {
         var clipboard = new ClipboardJS(button, {
             target: function (trigger) {
                 return trigger.previousSibling;
@@ -29,11 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // console.log('已复制到剪贴板:', e.text);
             // 阻止事件冒泡，避免影响其他逻辑
             // e.stopPropagation();
-
-            codeBlocks[i].button.textContent = 'Copied!';
+            button.textContent = 'Copied!';
 
             setTimeout(() => {
-                codeBlocks[i].button.textContent = 'Copy';
+                button.textContent = 'Copy';
             }, 3000);
             e.stopPropagation();
         });
