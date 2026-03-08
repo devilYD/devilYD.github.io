@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < codeBlocks.length; i++) {
         var codeBlock = codeBlocks[i];
         
-
         var button = document.createElement('button');
         button.textContent = 'Copy';
-        button.classList.add('copy-button'); // add CSS class
+        button.classList.add('copy-button-yd'); // add CSS class
         codeBlock.parentNode.insertBefore(button, codeBlock.nextSibling);
 
         copyToClipboard(button);

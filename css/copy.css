@@ -4,7 +4,7 @@ div.highlight {
 	position: relative;
 }
 
-div.highlight .copy-button {
+div.highlight .copy-button-yd {
     all: initial;
 	position: absolute;
 	top: 5px;
@@ -17,7 +17,7 @@ div.highlight .copy-button {
     transition: all 0.2s ease;
 }
 
-div.highlight .copy-button:hover {
+div.highlight .copy-button-yd:hover {
 	background-color: gray;
     border: 1px solid gray;
 	color: #ffffff;
