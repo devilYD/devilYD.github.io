@@ -36,6 +36,7 @@ tags:
   创建一个父项目parent和两个子项目core和controller
 
 * 父项目parent的pom文件修改如下
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -90,6 +91,7 @@ tags:
 ```
 
 * 子模块core的pom文件修改如下
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -121,6 +123,7 @@ tags:
 ```
 
 * 子模块controller的pom文件修改如下
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
