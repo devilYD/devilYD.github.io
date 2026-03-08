@@ -30,14 +30,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // 阻止事件冒泡，避免影响其他逻辑
             // e.stopPropagation();
 
-            button.setAttribute('data-toggle', 'tooltip');
-            button.setAttribute('data-title', '复制成功！');
-            button.setAttribute('data-placement', 'top');
+            button.textContent = 'Copied!';
 
             setTimeout(() => {
-                button.removeAttribute('data-toggle');
-                button.removeAttribute('data-title');
-                button.removeAttribute('data-placement');
+                button.textContent = 'Copy';
             }, 3000);
         });
         clipboard.on('error', function (e) {
