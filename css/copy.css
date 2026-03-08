@@ -1,5 +1,5 @@
 /* 代码块复制功能CCS样式 */
-copy-to-clipboard-button {
+.copy-to-clipboard-button {
 	border-radius: 5px;
     opacity: 0.8;
     background-color: black;
@@ -8,7 +8,7 @@ copy-to-clipboard-button {
     transition: all 0.2s ease;
 }
 
-copy-to-clipboard-button:hover {
+.copy-to-clipboard-button:hover {
 	background-color: gray;
     border: 1px solid gray;
 	color: #ffffff;
