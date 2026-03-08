@@ -23,3 +23,15 @@ div.highlight .copy-button-yd:hover {
 	color: #ffffff;
 	cursor: pointer;
 }
+
+
+.code-block-container {
+  position: relative;
+  margin: 15px 0;
+}
+
+
+pre {
+  position: relative;
+  padding-top: 20px; /* 为按钮留出空间 */
+}
