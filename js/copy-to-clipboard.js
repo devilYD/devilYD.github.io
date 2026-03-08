@@ -30,11 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // 阻止事件冒泡，避免影响其他逻辑
             // e.stopPropagation();
 
-            button.textContent = 'Copied!';
+            codeBlocks[i].button.textContent = 'Copied!';
 
             setTimeout(() => {
-                button.textContent = 'Copy';
+                codeBlocks[i].button.textContent = 'Copy';
             }, 3000);
+            e.stopPropagation();
         });
         clipboard.on('error', function (e) {
             console.error('复制失败:', e.action);
