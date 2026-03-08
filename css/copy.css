@@ -30,11 +30,10 @@ pre {
   position: absolute;
   top: 8px;
   right: 8px;
-  z-index: 10; /* 避免被代码遮挡 */
   padding: 4px 8px;
   border-radius: 4px;
-  background-color: #2d2d2d;
-  color: #fff;
+  background-color: black;
+  color: #ffffff;
   font-size: 12px;
   cursor: pointer;
   opacity: 0.8;
@@ -47,9 +46,4 @@ pre {
   background-color: #444;
   transform: translateY(-2px); /* 上浮效果 */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* 复制成功后的样式（插件会自动添加这个类） */
-.copy-to-clipboard-button.copied {
-  background-color: #28a745; /* 绿色提示 */
 }
