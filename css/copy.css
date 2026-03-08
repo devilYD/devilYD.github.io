@@ -9,7 +9,8 @@ div.highlight .copy-button {
 	right: 5px;
 	border-radius: 5px;
     opacity: 0.8;
-    border: 0px solid gray;
+    border: 0px solid black;
+    color: #ffffff;
     transition: all 0.2s ease;
 }
 
