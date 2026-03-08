@@ -4,8 +4,8 @@ div.highlight {
 
 div.highlight .copy-button {
 	position: absolute;
-	top: 13px;
-	right: 13px;
+	top: 5px;
+	right: 5px;
 	border-radius: 5px;
     opacity: 0.8;
     border: 0px solid gray;
