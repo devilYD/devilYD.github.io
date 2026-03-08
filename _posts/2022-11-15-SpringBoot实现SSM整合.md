@@ -37,21 +37,21 @@ SpringBoot本身就包含Junit，故可直接使用，方法如下：
 * 在Mapper代理接口前添加`@Mapper`注解
 
 ```XML
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.2.14</version>
-        </dependency>
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>druid</artifactId>
+    <version>1.2.14</version>
+</dependency>
 ```
 
-```JAVA-PROPERTIES
+```yarm
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/数据库名称?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
-    username: 账号
-    password: 密码
-    type: com.alibaba.druid.pool.DruidDataSource
+	datasource:
+		driver-class-name: com.mysql.cj.jdbc.Driver
+		url: jdbc:mysql://localhost:3306/数据库名称?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
+		username: 账号
+		password: 密码
+		type: com.alibaba.druid.pool.DruidDataSource
 ```
 
 这样就完成了。
