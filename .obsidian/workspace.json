@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2ed163b90003a8f0",
+        "id": "8c7d5910f5b70f8b",
         "type": "tabs",
         "children": [
           {
-            "id": "c61dd850c05b9ea5",
+            "id": "4545d372cb708501",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "_posts/2019-10-5-我想.md",
-                "bFile": "_posts/2019-10-5-我想.md",
-                "aRef": ""
+                "file": "template/博客模板.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 2019-10-5-我想  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "博客模板"
             }
           }
         ]
@@ -177,9 +177,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c61dd850c05b9ea5",
+  "active": "4545d372cb708501",
   "lastOpenFiles": [
+    "_posts/2026-03-08-标题.md",
+    "template/博客模板.md",
+    "_posts/2022-11-13-Maven简单入门(四).md",
+    "_posts/2022-3-5-树莓派400的小白使用指南2.md",
     "_posts/2022-2-28-C++标准库笔记(三).md",
+    "template",
     "_posts/2023-8-8-Vue学习(一).md",
     "_posts/2019-10-5-我想.md"
   ]
