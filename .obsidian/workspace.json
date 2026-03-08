@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2023-7-21-使用docker在本地进行环境管理以及隔离开发.md",
+                "file": "_posts/2026-03-08-Jekyll静态网页代码块美化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2023-7-21-使用docker在本地进行环境管理以及隔离开发"
+              "title": "2026-03-08-Jekyll静态网页代码块美化"
             }
           }
         ]
@@ -177,8 +177,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "15d5bd40ad3535b1",
+  "active": "ee02b40d1e992ab7",
   "lastOpenFiles": [
+    "_posts/2023-7-21-使用docker在本地进行环境管理以及隔离开发.md",
+    "_posts/2026-03-08-Jekyll静态网页代码块美化.md",
     "js/prism.js",
     "css/prism.css",
     "js/copy-to-clipboard.js",
@@ -208,7 +210,6 @@
     "_posts/2022-10-3-MySQL入门(三).md",
     "_posts/2022-9-29-MySQL入门(二).md",
     "_posts/2022-9-28-MySQL入门(一).md",
-    "_posts/2022-9-27-面向对象思想_JAVA.md",
     "template"
   ]
 }

@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (var i = 0; i < codeBlocks.length; i++) {
         var codeBlock = codeBlocks[i];
+        
 
         var button = document.createElement('button');
         button.textContent = 'Copy';
