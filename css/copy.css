@@ -8,7 +8,15 @@ div.highlight .copy-button {
 	right: 0px;
 	border-radius: 5px;
     opacity: 0.8;
+    border: 0px solid gray;
+    transition: all 0.2s ease;
+}
+
+div.highlight .copy-button:hover {
+	background-color: gray;
     border: 1px solid gray;
+	color: #ffffff;
+	cursor: pointer;
 }
 
 .notification {
