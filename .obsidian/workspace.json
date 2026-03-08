@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2022-11-15-SpringBoot实现SSM整合.md",
+                "file": "_posts/2026-03-08-Jekyll静态网页代码块美化.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2022-11-15-SpringBoot实现SSM整合"
+              "title": "2026-03-08-Jekyll静态网页代码块美化"
             }
           }
         ]
@@ -179,6 +179,7 @@
   },
   "active": "ee02b40d1e992ab7",
   "lastOpenFiles": [
+    "_posts/2022-11-15-SpringBoot实现SSM整合.md",
     "_posts/2026-03-08-Jekyll静态网页代码块美化.md",
     "_posts/2023-7-21-使用docker在本地进行环境管理以及隔离开发.md",
     "js/prism.js",
@@ -209,7 +210,6 @@
     "_posts/2022-10-4-MySQL入门(四).md",
     "_posts/2022-10-3-MySQL入门(三).md",
     "_posts/2022-9-29-MySQL入门(二).md",
-    "_posts/2022-9-28-MySQL入门(一).md",
     "template"
   ]
 }
