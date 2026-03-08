@@ -6,16 +6,19 @@ div.highlight .copy-button {
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	border-radius: 1px;
+	border-radius: 5px;
+    opacity: 0.8;
+    border: 1px solid gray;
 }
 
 .notification {
 	position: fixed;
+    border-radius: 5px;
 	top: 0;
-	left: 50%;
+	right: 10%;
 	transform: translateX(-50%);
 	padding: 10px;
-	color: antiquewhite;
+	color: gray;
 	opacity: 1;
 	transition: opacity 1s;
 }
