@@ -30,13 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
             // 阻止事件冒泡，避免影响其他逻辑
             // e.stopPropagation();
 
-            button.setAttribute('data-title-succeed','复制成功！');
-            button.setAttribute('data-placement','top');
+            button.setAttribute('data-toggle', 'tooltip');
+            button.setAttribute('data-title', '复制成功！');
+            button.setAttribute('data-placement', 'top');
 
             setTimeout(() => {
-			button.removeAttribute('data-title-succeed'); // 移除复制成功标记
-			button.removeAttribute('data-placement'); // 移除辅助属性
-		}, 3000);
+                button.removeAttribute('data-toggle');
+                button.removeAttribute('data-title');
+                button.removeAttribute('data-placement');
+            }, 3000);
         });
         clipboard.on('error', function (e) {
             console.error('复制失败:', e.action);
