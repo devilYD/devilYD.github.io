@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
         clipboard.on('success', function (e) {
-            // e.clearSelection();
+            e.clearSelection();
             // var notification = document.createElement('div');
             // notification.textContent = 'Copied!';
             // notification.classList.add('notification');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // }, 1000);
             // console.log('已复制到剪贴板:', e.text);
             // 阻止事件冒泡，避免影响其他逻辑
-            e.stopPropagation();
+            // e.stopPropagation();
 
             // 1. 获取按钮的位置和尺寸（相对于视口）
             const buttonRect = button.getBoundingClientRect();
