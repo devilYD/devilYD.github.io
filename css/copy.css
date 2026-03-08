@@ -14,36 +14,3 @@
 	color: #ffffff;
 	cursor: pointer;
 } */
-
-/* 覆盖 Prism 复制插件的默认样式，适配自定义需求 */
-pre {
-  position: relative; /* 作为按钮绝对定位的父容器 */
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 8px;
-  overflow: auto; /* 代码超出时滚动 */
-}
-
-/* 复制按钮核心样式 */
-.copy-to-clipboard-button {
-  all: unset; /* 重置默认样式 */
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 4px 8px;
-  border-radius: 4px;
-  background-color: black;
-  color: #ffffff;
-  font-size: 12px;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: all 0.2s ease;
-}
-
-/* 悬浮浮动效果 */
-.copy-to-clipboard-button:hover {
-  opacity: 1;
-  background-color: #444;
-  transform: translateY(-2px); /* 上浮效果 */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
