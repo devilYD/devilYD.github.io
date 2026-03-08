@@ -1,9 +1,11 @@
 /* 代码块复制功能CCS样式 */
 div.highlight {
+    all: initial;
 	position: relative;
 }
 
 div.highlight .copy-button {
+    all: initial;
 	position: absolute;
 	top: 5px;
 	right: 5px;
