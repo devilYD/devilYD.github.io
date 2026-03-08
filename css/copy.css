@@ -1,14 +1,5 @@
 /* 代码块复制功能CCS样式 */
-div.highlight {
-    all: initial;
-	position: relative;
-}
-
-div.highlight .copy-button-yd {
-    all: initial;
-	position: absolute;
-	top: 5px;
-	right: 5px;
+copy-to-clipboard-button {
 	border-radius: 5px;
     opacity: 0.8;
     background-color: black;
@@ -17,21 +8,9 @@ div.highlight .copy-button-yd {
     transition: all 0.2s ease;
 }
 
-div.highlight .copy-button-yd:hover {
+copy-to-clipboard-button:hover {
 	background-color: gray;
     border: 1px solid gray;
 	color: #ffffff;
 	cursor: pointer;
-}
-
-
-.code-block-container {
-  position: relative;
-  margin: 15px 0;
-}
-
-
-pre {
-  position: relative;
-  padding-top: 20px; /* 为按钮留出空间 */
 }
