@@ -3,7 +3,7 @@ layout:         post
 title:          SpringMVC
 subtitle:       基本使用
 date:           2022-10-31
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

@@ -5,7 +5,7 @@ header-img: img/YD-homepage.jpg
 email: devilyudun@gmail.com
 description: "Every failure is leading towards success."
 keyword: "YD, YD Blog, 余盾的博客, yzk, 余泽康, Devil,devil"
-url: "http://devilYD.github.io"          # your host, for absolute URL
+url: "https://devilyd.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/devilYD/devilYD.github.io.git" # you code repository
 
@@ -32,7 +32,7 @@ github_username:      devilYD
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md",'template']
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md",'template','docs']
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 

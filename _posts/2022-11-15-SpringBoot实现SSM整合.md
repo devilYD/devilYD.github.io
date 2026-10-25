@@ -3,7 +3,7 @@ layout:         post
 title:          SpringBoot实现SSM整合
 subtitle:       Web相关
 date:           2022-11-15
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

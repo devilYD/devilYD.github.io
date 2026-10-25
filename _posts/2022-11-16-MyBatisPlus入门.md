@@ -3,7 +3,7 @@ layout:         post
 title:          MyBatisPlus入门
 subtitle:       Web相关
 date:           2022-11-16
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

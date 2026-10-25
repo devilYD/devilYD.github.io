@@ -3,7 +3,7 @@ layout:         post
 title:          SpringBoot简介
 subtitle:       Web相关
 date:           2022-11-14
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

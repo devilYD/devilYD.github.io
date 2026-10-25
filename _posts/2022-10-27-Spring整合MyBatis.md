@@ -3,7 +3,7 @@ layout:         post
 title:          Spring整合MyBatis
 subtitle:       数据库框架
 date:           2022-10-27
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

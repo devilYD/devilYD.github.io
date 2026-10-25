@@ -1,0 +1,22 @@
+# Jekyll 构建产物
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Bundler
+vendor/
+
+# Node
+node_modules/
+
+# Obsidian：保留共享配置，忽略每台机器各自的界面状态与缓存
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+
+# 操作系统与编辑器
+.DS_Store
+Thumbs.db
+*.swp
+*~

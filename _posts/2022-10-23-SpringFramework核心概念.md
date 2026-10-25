@@ -3,7 +3,7 @@ layout:         post
 title:          SpringFramework核心概念
 subtitle:       IoC/DI、IoC容器、Bean
 date:           2022-10-23
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

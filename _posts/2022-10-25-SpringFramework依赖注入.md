@@ -3,7 +3,7 @@ layout:         post
 title:          SpringFramework依赖注入
 subtitle:       DI相关内容
 date:           2022-10-25
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

@@ -3,7 +3,7 @@ layout:         post
 title:          SpringBoot多模块开发细节
 subtitle:       实践总结
 date:           2022-12-14
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

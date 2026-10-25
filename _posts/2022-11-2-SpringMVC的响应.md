@@ -3,7 +3,7 @@ layout:         post
 title:          SpringMVC中的响应
 subtitle:       Web相关
 date:           2022-11-2
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

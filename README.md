@@ -1,24 +1,51 @@
-# 这是devilYD的个人博客
-# 仅供自己上传学习笔记和个人作品。
+# YD Blog
 
-[博客地址](http://devilyd.github.io)
-	
-上大学之后，一直都想有个地方储存和发表自己的一些学习笔记和个人作品，于是便尝试制作了这个博客。
+余盾的个人博客，基于 Jekyll 与 GitHub Pages 构建，主要存放 Java / JavaWeb / Spring 学习笔记、C++ 与工具类笔记，以及少量随笔。
 
-本博客使用了[github pages](https://pages.github.com/) 和 [Jekyll](http://jekyll.com.cn/) 技术进行构建。
+线上地址：<https://devilyd.github.io>
 
-同时使用了 [gitalk](https://github.com/gitalk/gitalk/) 组件实现了评论功能，登陆github账号即可进行评论，配置时参考了[dragon](https://segmentfault.com/u/dr；agon_li) 和 [Java成长之路](https://www.jianshu.com/u/31ccce39a24b) 的教程,在这里表示感谢，以下是教程链接：
+## 技术栈
 
-[Gitalk评论插件使用教程](https://segmentfault.com/a/1190000018072952)
+Jekyll + Liquid + Markdown（kramdown / GFM），Bootstrap 3 + 自定义 Less 主题，Rouge + Prism.js 代码高亮，Gitalk 评论，PWA 离线支持。主题改自 [qiubaiying](https://github.com/qiubaiying/qiubaiying.github.io) 的 Hux Blog。
 
-[一款超好用的第三方评论插件--Gittalk](https://www.jianshu.com/p/4242bb065550)
+## 目录
 
-同时使用了 [BY](http://qiubaiying.vip/) 先生的项目作为模板，在这里对BY先生表示由衷的感谢，您的教程使我受益良多。
+```text
+_posts/      文章（66 篇，唯一内容源）
+_layouts/    页面骨架：default / page / post / keynote
+_includes/   head / nav / footer
+img/ css/ js/ fonts/   静态资源
+less/        主题 Less 源码
+template/    Obsidian 文章模板
+docs/        项目文档（不参与构建）
+```
 
-[👉这是BY先生的项目地址](https://github.com/qiubaiying/qiubaiying.github.io) 
+## 写一篇新文章
 
-如果有兴趣请前往标星和学习（这个项目好像有几年没有更新了，希望不会打扰到BY先生）。
+1. 复制 `template/博客模板.md` 到 `_posts/`，命名为 `YYYY-MM-DD-标题.md`；
+2. 填写 `title`、`date`、`subtitle`、`header-img`、`tags`（`layout: post` 保持不变）；
+3. 提交并推送到 `main`，GitHub Pages 会自动构建发布。
 
+Front matter 字段、标签规范和常见问题见 [维护指南](docs/maintenance.md)。
 
+## 本地预览
 
+```powershell
+gem install github-pages
+jekyll serve --watch   # http://127.0.0.1:4000
+```
 
+## 项目文档
+
+- [资料导航](docs/README.md)
+- [项目结构说明](docs/project-structure.md)
+- [文章索引](docs/content-index.md)
+- [维护指南](docs/maintenance.md)
+
+## 致谢
+
+- 主题与教程：[qiubaiying/qiubaiying.github.io](https://github.com/qiubaiying/qiubaiying.github.io)、[Hux Blog](https://github.com/Huxpro/huxpro.github.io)
+- 评论组件：[Gitalk](https://github.com/gitalk/gitalk)
+- 建站方案：[GitHub Pages](https://pages.github.com/)、[Jekyll](https://jekyllrb.com/)
+
+站内图片来自网络，如有侵权请联系署名或删除。

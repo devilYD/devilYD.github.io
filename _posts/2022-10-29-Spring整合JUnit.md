@@ -3,7 +3,7 @@ layout:         post
 title:          Spring整合JUnit
 subtitle:       测试
 date:           2022-10-29
-auther:         YD
+author:         YD
 header-img:     img/YD-Spring.jpg
 catalog:            true
 tags:

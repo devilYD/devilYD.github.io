@@ -3,7 +3,7 @@ layout:         post
 title:          JavaScript简单入门
 subtitle:       如何使网页活过来
 date:           2022-10-11
-auther:         YD
+author:         YD
 header-img:     img/YD-rainingnight.jpg
 catalog:            true
 tags:
