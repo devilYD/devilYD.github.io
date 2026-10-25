@@ -11,7 +11,7 @@ Jekyll + Liquid + Markdown（kramdown / GFM），Bootstrap 3 + 自定义 Less �
 ## 目录
 
 ```text
-_posts/      文章（66 篇，唯一内容源）
+_posts/      文章（67 篇，唯一内容源）
 _layouts/    页面骨架：default / page / post / keynote
 _includes/   head / nav / footer
 img/ css/ js/ fonts/   静态资源

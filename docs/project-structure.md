@@ -7,7 +7,7 @@
 - 站点名：`YD Blog`（余盾的博客），仓库 `devilYD/devilYD.github.io`
 - 技术：Jekyll + Liquid 模板 + Markdown，由 GitHub Pages 自动构建
 - 主题：基于 [qiubaiying/qiubaiying.github.io](https://github.com/qiubaiying/qiubaiying.github.io)（Hux Blog 主题）二次修改
-- 内容：66 篇文章（2019–2026），以 Java / JavaWeb / Spring / SSM 学习笔记为主，另有 C++、树莓派、Docker 和少量随笔
+- 内容：67 篇文章（2019–2026），以 Java / JavaWeb / Spring / SSM 学习笔记为主，另有 C++、树莓派、Docker、软件推荐和少量随笔
 - 写作方式：用 Obsidian 直接打开仓库根目录作为 vault，新文章落在 `_posts/`，通过 Obsidian Git 插件提交并推送
 
 ## 二、技术栈
@@ -30,7 +30,7 @@
 ```text
 devilYD.github.io/
 ├── _config.yml              # 全站配置：标题、作者、分页、评论、统计、构建规则
-├── _posts/                  # ★ 唯一内容源：66 篇 Markdown 文章
+├── _posts/                  # ★ 唯一内容源：67 篇 Markdown 文章
 ├── _layouts/                # 页面骨架（4 个）
 │   ├── default.html         #   HTML 外壳：head + nav + content + footer
 │   ├── page.html            #   普通页面：带页头、侧栏、标签云（首页/关于/标签页使用）
@@ -148,7 +148,7 @@ tags:
 
 - **样式**：`less/` 是主题源码；`css/hux-blog.css` 与压缩版 `hux-blog.min.css` 同时存在，页面实际加载 `.min.css`。`css/syntax.css`（Rouge）与 `css/prism.css`、`css/copy.css` 都会被加载。改样式时改 Less 再编译，或直接改 CSS。
 - **脚本**：`footer.html` 依次加载 jQuery、Bootstrap、`hux-blog.min.js`；`head.html` 加载 `prism.js`；标签页按需加载 `jquery.tagcloud.js`，文章目录按需加载 `jquery.nav.js`，Gitalk 用 `md5.min.js`。
-- **图片**：统一放 `img/`，文章里写 `/img/xxx.jpg`；当前有 2 张未被引用（`YD-darknight1.jpg`、`YD-mountain.jpg`）。
+- **图片**：统一放 `img/`，文章里写 `/img/xxx.jpg`；当前有 1 张未被引用（`YD-darknight1.jpg`）。
 - **PWA**：`pwa/manifest.json` 定义图标与主题色；`sw.js` 在根目录注册，预缓存 `offline.html`，其余请求走 stale-while-revalidate 并用运行时缓存兜底。改版后如遇旧页面，可提升 `PRECACHE` 版本号或强制刷新。
 
 ## 七、写作与发布
@@ -161,6 +161,6 @@ tags:
 
 ## 八、相关文档
 
-- [文章索引](content-index.md)：66 篇文章按主题分类的完整清单
+- [文章索引](content-index.md)：67 篇文章按主题分类的完整清单
 - [维护指南](maintenance.md)：front matter 规范、本地预览、常见问题与待办
 - [资料导航](README.md)：本目录的阅读顺序

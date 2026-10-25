@@ -30,7 +30,7 @@ tags:
 
 标签区分大小写，同一个含义必须写法完全一致，否则会分裂成两个标签页。当前常用标签：
 
-`笔记`、`JAVA`、`Spring`、`数据库`、`Maven`、`前端`、`C/C++`、`C++标准库`、`树莓派`、`DIY`、`折腾`、`致蛋蛋`、`一首小诗`、`编程相关`、`数据结构`、`网络`、`日常`、`docker`、`CSS`、`JavaScript`
+`笔记`、`JAVA`、`Spring`、`数据库`、`Maven`、`前端`、`C/C++`、`C++标准库`、`树莓派`、`DIY`、`折腾`、`致蛋蛋`、`一首小诗`、`编程相关`、`数据结构`、`网络`、`日常`、`docker`、`CSS`、`JavaScript`、`软件推荐`、`下载工具`、`开源`
 
 建议后续统一：`JAVA` → `Java`、`docker` → `Docker`，并给只有 `笔记` 标签的文章补一个主题标签。改标签会影响标签页锚点，但不影响文章 URL 与评论。
 
@@ -97,7 +97,7 @@ docker run --rm -it --volume "${PWD}:/srv/jekyll" --publish 4000:4000 `
 
 | 项目 | 处理 |
 | --- | --- |
-| 66 篇文章和模板里的 `auther:` 拼写错误 | 统一改为 `author:`，文章页现在显示“Posted by YD”而不是站点名 |
+| 原有 66 篇文章和模板里的 `auther:` 拼写错误 | 统一改为 `author:`，文章页现在显示“Posted by YD”而不是站点名 |
 | `about.html` 中 `distractionFreeMode: {site.gitalk...}` 少写一层大括号 | 改为 `{{ ... }}`，避免关于页 JS 语法错误导致评论区不加载 |
 | `head.html` / `footer.html` 资源路径里的多余空格 | 清理为 `"/css/..."`、`"/js/..."` |
 | `_config.yml` 的 `url` 为 `http://` | 改为 `https://devilyd.github.io` |
@@ -116,7 +116,7 @@ docker run --rm -it --volume "${PWD}:/srv/jekyll" --publish 4000:4000 `
 | 低 | `CNAME` 是 0 字节空文件 | 未配置自定义域名，建议删除以免误判；若绑定域名则填入域名 |
 | 低 | `package.json` 仍是模板信息 | `name: by-blog`、`title: BY Blog`、预览脚本用 Python 2 的 `SimpleHTTPServer`；可改为本项目信息或直接删掉 Grunt 相关文件 |
 | 低 | `.obsidian/workspace.json` 仍被 Git 跟踪 | 已加入 `.gitignore`，需要执行一次 `git rm --cached .obsidian/workspace.json` 才会停止跟踪 |
-| 低 | 未引用资源 | `img/YD-darknight1.jpg`、`img/YD-mountain.jpg` 未被引用；`js/jquery.js`、`js/bootstrap.js`、`js/hux-blog.js` 有压缩版在用，未压缩版可删 |
+| 低 | 未引用资源 | `img/YD-darknight1.jpg` 未被引用；`js/jquery.js`、`js/bootstrap.js`、`js/hux-blog.js` 有压缩版在用，未压缩版可删 |
 | 低 | Disqus 相关 Liquid 永远不会执行 | 模板判断 `site.disqus.enable`，而配置里只有注释掉的 `disqus_username`，属于模板残留，可清理 |
 | 低 | `gems:` 配置键 | GitHub Pages 目前仍可使用；升级到 Jekyll 4 时需改为 `plugins:` |
 | 低 | 同一日期多篇文章 | 如 2022-09-26 有 4 篇、2022-03-05 有 6 篇，排序由 Jekyll 决定，列表顺序可能不稳定；可在 front matter 加具体时间（`date: 2022-09-26 10:00:00`） |
